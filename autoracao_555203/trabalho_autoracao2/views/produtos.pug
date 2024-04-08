@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.ini-box
+    h1 Lista de Produtos de Informática
+    
+    table.pure-table
+      thead 
+        tr
+          th Nome do Produto
+          th Descrição
+          th Preço
+      tbody 
+        each produto in produtos
+          tr  
+            td #{produto.nome}
+            td #{produto.descricao}
+            td #{produto.preco}

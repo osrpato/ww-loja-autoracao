@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div.ini-box
+        h1 Cadastro de Produto
+        if error
+            p.erro #{error}
+        form.pure-form(action="/cadastro-produtos" method="post")
+            div.margin-t-3
+                label(for="nomeProduto") Nome do Produto:
+                input.pure-input-1(type="text" id="nomeProduto" name="nomeProduto" required)
+            div.margin-t-3
+                label(for="descricao") Descrição:
+                textarea.pure-input-1(id="descricao" name="descricao" required)
+            div.margin-t-3
+                label(for="preco") Preço:
+                input.pure-input-1(type="number" step="0.01" id="preco" name="preco" required)
+            div.jend
+                button.pure-button.pure-button-primary.jend(type="submit") Cadastrar Produto
